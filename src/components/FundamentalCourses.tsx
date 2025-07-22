@@ -65,54 +65,44 @@ const FundamentalCourses = () => {
           {courses.map((course) => (
             <div 
               key={course.id} 
-              className="bg-white rounded-xl border border-transparent shadow-sm hover:shadow-xl hover:border-[#3B82F6] hover:-translate-y-3 transition-all duration-500 ease-out p-6 group cursor-pointer flex flex-col relative overflow-hidden"
-              style={{
-                background: 'linear-gradient(145deg, #ffffff 0%, #fafbfc 100%)',
-                height: '420px'
-              }}
+              className="bg-white rounded-2xl border border-gray-200 hover:border-[#3B82F6] shadow-sm hover:shadow-md transition-all duration-300 ease-out p-6 group cursor-pointer flex flex-col h-full"
             >
-              {/* Subtle blue glow effect on hover */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#3B82F6]/5 via-transparent to-[#3B82F6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out"></div>
+              <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl ${course.color} mb-4 transition-all duration-200`}>
+                {course.icon}
+              </div>
               
-              <div className="relative z-10">
-                <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg ${course.color} mb-4 group-hover:scale-110 transition-transform duration-300 ease-out`}>
-                  {course.icon}
+              <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
+                {course.title}
+              </h3>
+              
+              <div className="flex-grow mb-4">
+                <p className="text-gray-600 text-sm line-clamp-3">
+                  {course.description}
+                </p>
+              </div>
+              
+              <div className="mt-auto">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                    course.level === 'Beginner' ? 'bg-green-100 text-green-800' : 'bg-orange-100 text-orange-800'
+                  }`}>
+                    {course.level}
+                  </span>
+                  <span className="text-sm text-gray-500">{course.duration}</span>
                 </div>
                 
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#3B82F6] transition-colors duration-300 min-h-[56px] flex items-start">
-                  {course.title}
-                </h3>
-                
-                <div className="flex-grow mb-6">
-                  <p className="text-gray-600 text-sm group-hover:text-gray-700 transition-colors duration-300 line-clamp-4">
-                    {course.description}
-                  </p>
-                </div>
-                
-                <div className="mt-auto">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium transition-transform duration-200 group-hover:scale-105 ${
-                      course.level === 'Beginner' ? 'bg-green-100 text-green-800' : 'bg-orange-100 text-orange-800'
-                    }`}>
-                      {course.level}
-                    </span>
-                    <span className="text-sm text-gray-500 group-hover:text-gray-600 transition-colors duration-300">{course.duration}</span>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-1">
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <span className="text-sm font-medium text-gray-900">{course.rating}</span>
                   </div>
-                  
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-1 group-hover:scale-105 transition-transform duration-200">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current group-hover:text-yellow-500 transition-colors duration-200" />
-                      <span className="text-sm font-medium text-gray-900 group-hover:text-[#3B82F6] transition-colors duration-300">{course.rating}</span>
-                    </div>
-                    <span className="text-sm text-gray-500 group-hover:text-gray-600 transition-colors duration-300">{course.students}</span>
-                  </div>
-                  
-                  <button className="w-full flex items-center justify-center gap-2 bg-[#3B82F6] hover:bg-[#2563EB] text-white py-2.5 px-4 rounded-lg transition-all duration-300 ease-out group-hover:scale-105 group-hover:shadow-lg transform relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#2563EB] to-[#1D4ED8] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <Lock className="w-4 h-4 relative z-10 group-hover:rotate-12 transition-transform duration-300" />
-                    <span className="relative z-10 font-medium">Unlock Course</span>
-                  </button>
+                  <span className="text-sm text-gray-500">{course.students}</span>
                 </div>
+                
+                <button className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg transition-all duration-200 ease-out font-medium border border-gray-300 text-gray-700 group-hover:bg-[#3B82F6] group-hover:text-white group-hover:border-[#3B82F6]">
+                  <Lock className="w-4 h-4" />
+                  <span>Unlock Course</span>
+                </button>
               </div>
             </div>
           ))}

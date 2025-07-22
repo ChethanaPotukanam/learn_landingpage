@@ -74,9 +74,9 @@ const Index = () => {
         <AdvancedCoursesCarousel />
         <Features />
         <Testimonials />
-        <Newsletter />
         <CompareSection />
-        <MadeByHumans />
+        <Newsletter />
+        {/* <MadeByHumans /> */}
       </main>
       <Footer />
     </div>
