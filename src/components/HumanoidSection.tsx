@@ -93,21 +93,7 @@ const HumanoidSection = () => {
       >
         <div className="container px-6 lg:px-8 mx-auto h-full flex flex-col">
           <div className="mb-2 md:mb-3">
-            <div className="flex items-center gap-4 mb-2 md:mb-2 pt-8 sm:pt-6 md:pt-4">
-              <div
-                className="pulse-chip opacity-0 animate-fade-in"
-                style={{
-                  animationDelay: "0.1s",
-                }}
-              >
-                <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">
-                  02
-                </span>
-                <span>Our Mission</span>
-              </div>
-            </div>
-
-            <h2 className="section-title text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-1 md:mb-2">
+            <h2 className="section-title text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-1 md:mb-2 text-center">
               Our Mission
             </h2>
           </div>
@@ -149,11 +135,12 @@ const HumanoidSection = () => {
               <div className="relative z-10 p-6 sm:p-8 md:p-12 h-full flex items-center">
                 <div className="max-w-3xl mx-auto">
                   <h3 className="text-lg sm:text-xl md:text-2xl font-display text-white font-bold leading-relaxed mb-4">
-                    Learning is Broken. Your Potential is Trapped.<br></br>Today's
-                    online learning is a maze of passive video lectures,
-                    one-size-fits-all curricula, and tests that measure memory,
-                    not mastery. Your potential is trapped in a model that was
-                    never built for you.<br></br> We knew there had to be a better way.
+                    Learning is Broken. Your Potential is Trapped.<br></br>
+                    <br></br>Today's online learning is a maze of passive video
+                    lectures, one-size-fits-all curricula, and tests that
+                    measure memory, not mastery. Your potential is trapped in a
+                    model that was never built for you.<br></br> <br></br>We
+                    knew there had to be a better way.
                   </h3>
                 </div>
               </div>
@@ -197,7 +184,14 @@ const HumanoidSection = () => {
               <div className="relative z-10 p-6 sm:p-8 md:p-12 h-full flex items-center">
                 <div className="max-w-3xl mx-auto">
                   <h3 className="text-lg sm:text-xl md:text-2xl font-display text-white font-bold leading-relaxed mb-4">
-                    A Smarter Pathway Forward<br></br>We replace the traditional monologues with engaging podcast-style lessons. Our Interactive AI Tutor is a chat away 24/7 —clarifying doubts, providing targeted interventions, and ensuring you never get stuck. It's learning that is interactive, personal, and designed to keep you moving forward.<br></br>Conversations that build competence.
+                    A Smarter Pathway Forward<br></br>
+                    <br></br>We replace the traditional monologues with engaging
+                    podcast-style lessons. Our Interactive AI Tutor is a chat
+                    away 24/7 —clarifying doubts, providing targeted
+                    interventions, and ensuring you never get stuck. It's
+                    learning that is interactive, personal, and designed to keep
+                    you moving forward.<br></br>
+                    <br></br>Conversations that build competence.
                   </h3>
                 </div>
               </div>
@@ -240,9 +234,18 @@ const HumanoidSection = () => {
 
               <div className="relative z-10 p-6 sm:p-8 md:p-12 h-full flex items-center">
                 <div className="max-w-3xl mx-auto">
-                  <h3 className="text-lg text-[#FC4D0A] sm:text-xl md:text-2xl font-display font-bold leading-relaxed mb-4">
-                    From Knowledge to Know-How{" "}<br></br>
-                    <span className="text-white">In a world being reshaped by AI, staying ahead is everything. Our goal isn't just course completion -  it's building real capability. Continuous assessment and a focus on applied skills mean you don't just finish a course—you emerge with a deep, proven understanding you can confidently apply from day one.<br></br>A Foundation for Lifelong Growth.</span>
+                  <h3 className="text-lg text-white sm:text-xl md:text-2xl font-display font-bold leading-relaxed mb-4">
+                    From Knowledge to Know-How <br></br>
+                    <br></br>
+                    <span className="text-white">
+                      In a world being reshaped by AI, staying ahead is
+                      everything. Our goal isn't just course completion - it's
+                      building real capability. Continuous assessment and a
+                      focus on applied skills mean you don't just finish a
+                      course—you emerge with a deep, proven understanding you
+                      can confidently apply from day one.<br></br>A Foundation
+                      for Lifelong Growth.
+                    </span>
                   </h3>
                 </div>
               </div>

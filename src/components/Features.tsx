@@ -1,6 +1,13 @@
-
 import React, { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
+import {
+  MessageCircle,
+  Route,
+  CheckCircle,
+  Target,
+  TrendingUp,
+  Award,
+} from "lucide-react";
 
 interface FeatureCardProps {
   icon: React.ReactNode;
@@ -11,7 +18,7 @@ interface FeatureCardProps {
 
 const FeatureCard = ({ icon, title, description, index }: FeatureCardProps) => {
   const cardRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -24,20 +31,20 @@ const FeatureCard = ({ icon, title, description, index }: FeatureCardProps) => {
       },
       { threshold: 0.1 }
     );
-    
+
     if (cardRef.current) {
       observer.observe(cardRef.current);
     }
-    
+
     return () => {
       if (cardRef.current) {
         observer.unobserve(cardRef.current);
       }
     };
   }, []);
-  
+
   return (
-    <div 
+    <div
       ref={cardRef}
       className={cn(
         "feature-card glass-card opacity-0 p-4 sm:p-6",
@@ -57,7 +64,7 @@ const FeatureCard = ({ icon, title, description, index }: FeatureCardProps) => {
 
 const Features = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -75,72 +82,70 @@ const Features = () => {
       },
       { threshold: 0.1 }
     );
-    
+
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-    
+
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
     };
   }, []);
-  
+
   return (
-    <section className="py-12 sm:py-16 md:py-20 pb-0 relative bg-gray-50" id="features" ref={sectionRef}>
+    <section
+      className="py-12 sm:py-16 md:py-20 pb-0 relative bg-gray-50"
+      id="features"
+      ref={sectionRef}
+    >
       <div className="section-container">
         <div className="text-center mb-10 sm:mb-16">
-          <div className="flex items-center gap-4 mb-8 sm:mb-16">
-          <div className="flex items-center gap-4">
-            <div className="pulse-chip">
-              <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">03</span>
-              <span>How It Works</span>
-            </div>
-          </div>
-          {/* <div className="flex-1 h-[1px] bg-gray-300"></div> */}
-        </div>
           <h2 className="section-title mb-3 sm:mb-4 opacity-0 fade-in-element">
-            The Technology<br className="hidden sm:block" /> That Powers Your Journey
+            The Technology
+            <br className="hidden sm:block" /> That Powers Your Journey
           </h2>
           <p className="section-subtitle mx-auto opacity-0 fade-in-element">
-            Our vision is made real through cutting-edge AI designed to understand your learning style, adapt to your needs, and guide you forward.
+            Our vision is made real through cutting-edge AI designed to
+            understand your learning style, adapt to your needs, and guide you
+            forward.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           <FeatureCard
-            icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 sm:w-6 sm:h-6"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 1 1-4-4"></path><path d="M12 8a4 4 0 1 0 4 4"></path><circle cx="12" cy="12" r="1"></circle></svg>}
+            icon={<MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />}
             title="Interactive AI Tutor"
             description="Our core innovation is an AI Tutor that does more than just answer questions. It actively engages you in a two-way dialogue, clarifies doubts, provides motivation, and even asks questions to ensure you truly understand the material."
             index={0}
           />
           <FeatureCard
-            icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 sm:w-6 sm:h-6"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="M9 13v-1h6v1"></path><path d="M11 18.5l-.5-1 1-.5.5 1.5-1 .5-.5-1 1-.5"></path><path d="M9.5 12 9 11H4"></path></svg>}
+            icon={<Route className="w-5 h-5 sm:w-6 sm:h-6" />}
             title="Adaptive Learning Pathways"
             description=" Your learning path is a living system, not a fixed track. It begins with an AI profile of your current skills and continuously evolves based on your performance, ensuring you're always focused on the most impactful areas for your growth."
             index={1}
           />
           <FeatureCard
-            icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 sm:w-6 sm:h-6"><rect width="18" height="11" x="3" y="11" rx="2"></rect><circle cx="12" cy="5" r="2"></circle><path d="M12 7v4"></path><line x1="8" x2="8" y1="16" y2="16"></line><line x1="16" x2="16" y1="16" y2="16"></line></svg>}
+            icon={<CheckCircle className="w-5 h-5 sm:w-6 sm:h-6" />}
             title="Continuous Assessment"
             description=" Beyond quizzes, your mastery is evaluated continuously through your dialogue with the AI Tutor. This authenticates your skills in a way that's harder to game, leading to highly credible certifications."
             index={2}
           />
           <FeatureCard
-            icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 sm:w-6 sm:h-6"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline><polyline points="7.5 19.79 7.5 14.6 3 12"></polyline><polyline points="21 12 16.5 14.6 16.5 19.79"></polyline><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" x2="12" y1="22.08" y2="12"></line></svg>}
+            icon={<Target className="w-5 h-5 sm:w-6 sm:h-6" />}
             title="Applied Skills Focus "
             description="Our curriculum emphasizes hands-on, practical application. We focus on ensuring the skills you learn are immediately usable, so you can apply your knowledge in real-world scenarios from day one."
             index={3}
           />
           <FeatureCard
-            icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 sm:w-6 sm:h-6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path><path d="m14.5 9-5 5"></path><path d="m9.5 9 5 5"></path></svg>}
+            icon={<TrendingUp className="w-5 h-5 sm:w-6 sm:h-6" />}
             title="Career-Focused Pathways"
             description="We map our courses to specific industry job roles, like AI Engineer or Data Analyst. This provides clarity, helping you select the right coursework to achieve your specific career goals."
             index={4}
           />
           <FeatureCard
-            icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 sm:w-6 sm:h-6"><path d="M16 6H3v11a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1h-2"></path><path d="M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2"></path><line x1="12" x2="12" y1="11" y2="15"></line><line x1="10" x2="14" y1="13" y2="13"></line></svg>}
+            icon={<Award className="w-5 h-5 sm:w-6 sm:h-6" />}
             title="High-Quality Content"
             description="We offer curated, high-quality content that is platform-neutral. Our focus is on broadly applicable skills, not training for a specific vendor's tools, ensuring your knowledge is valuable everywhere."
             index={5}

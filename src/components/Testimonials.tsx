@@ -66,15 +66,7 @@ const Testimonials = () => {
 
   return <section className="py-12 bg-white relative" id="testimonials" ref={sectionRef}> {/* Reduced from py-20 */}
       <div className="section-container opacity-0 animate-on-scroll">
-        <div className="flex items-center gap-4 mb-6">
-          <div className="pulse-chip">
-            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">06</span>
-            <span>Proof of Impact</span>
-          </div>
-        </div>
-        
-        <h2 className="text-5xl font-display font-bold mb-12 text-left">What Our Partners Say</h2>
-        
+        <h2 className="text-5xl font-display font-bold mb-12 text-center">What Our Partners Say</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => <TestimonialCard key={index} content={testimonial.content} author={testimonial.author} role={testimonial.role} gradient={testimonial.gradient} backgroundImage={testimonial.backgroundImage} />)}
         </div>

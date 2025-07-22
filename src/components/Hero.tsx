@@ -80,18 +80,6 @@ const Hero = () => {
 
       <div className="container px-4 sm:px-6 lg:px-8 relative z-10" ref={containerRef}>
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-          {/* Header with badge and line */}
-      <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
-        <div className="flex items-center gap-4 mb-8 sm:mb-16">
-          <div className="flex items-center gap-4">
-            <div className="pulse-chip">
-              <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">01</span>
-              <span>Purpose</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
           <h1
             className="section-title text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight opacity-0 animate-fade-in flex items-center justify-center flex-wrap gap-3 sm:gap-4"
             style={{ animationDelay: "0.3s" }}

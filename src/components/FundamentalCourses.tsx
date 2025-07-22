@@ -50,19 +50,7 @@ const FundamentalCourses = () => {
   ];
 
   return (
-    <section id="courses" className="py-16 lg:py-24 bg-gray-50 font-sans">
-      {/* Header with badge and line */}
-      <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
-        <div className="flex items-center gap-4 mb-8 sm:mb-16">
-          <div className="flex items-center gap-4">
-            <div className="pulse-chip font-sans">
-              <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">04</span>
-              <span>Courses - Your Path to Mastery</span>
-            </div>
-          </div>
-          {/* <div className="flex-1 h-[1px] bg-gray-300"></div> */}
-        </div>
-      </div>
+    <section id="courses" className="py-16 lg:py-24 bg-gradient-to-br from-sky-50 to-blue-50 font-sans">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-display">

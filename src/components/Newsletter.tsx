@@ -26,14 +26,7 @@ const Newsletter = () => {
   };
   return <section id="newsletter" className="bg-white py-0">
       <div className="section-container opacity-0 animate-on-scroll">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="pulse-chip">
-              <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">09</span>
-              <span>Join the Wait List</span>
-            </div>
-          </div>
-          
+        <div className="max-w-6xl mx-auto">  
           <h2 className="text-5xl font-display font-bold mb-4 text-left">Be the First to Experience the Future of Learning</h2>
           <p className="text-xl text-gray-700 mb-10 text-left">
             We're rolling out access to a limited number of users. Join the waitlist to secure your spot and be among the first to transform your skills with Hitloop Herald.
