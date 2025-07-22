@@ -74,13 +74,14 @@ const Navbar = () => {
             >
               Home
             </a>
+            <a href="#ourmission" className="nav-link">Our Mission</a>
             <a href="#courses" className="nav-link">Courses</a>
-            <a href="#features" className="nav-link">About</a>
+            <a href="#forbusiness" className="nav-link">For Business</a>
+            <a href="#joinwaitlist" className="nav-link">Join Waitlist</a>
           </nav>
           <div className="flex space-x-4">
-            <button className="nav-link hover:text-blue-600 transition-colors">Login</button>
             <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-              Sign Up
+              Login
             </button>
           </div>
         </div>
@@ -121,7 +122,7 @@ const Navbar = () => {
               document.body.style.overflow = '';
             }}
           >
-            Courses
+            Our Mission
           </a>
           <a 
             href="#features" 
@@ -131,18 +132,29 @@ const Navbar = () => {
               document.body.style.overflow = '';
             }}
           >
-            About
+            Courses
+          </a>
+          <a 
+            href="#courses" 
+            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+            onClick={() => {
+              setIsMenuOpen(false);
+              document.body.style.overflow = '';
+            }}
+          >
+            For Business
+          </a>
+          <a 
+            href="#courses" 
+            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+            onClick={() => {
+              setIsMenuOpen(false);
+              document.body.style.overflow = '';
+            }}
+          >
+            Join Waitlist
           </a>
           <div className="flex flex-col space-y-4 w-full">
-            <button 
-              className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100"
-              onClick={() => {
-                setIsMenuOpen(false);
-                document.body.style.overflow = '';
-              }}
-            >
-              Login
-            </button>
             <button 
               className="bg-blue-600 text-white text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-blue-700"
               onClick={() => {
@@ -150,7 +162,7 @@ const Navbar = () => {
                 document.body.style.overflow = '';
               }}
             >
-              Sign Up
+              Login
             </button>
           </div>
         </nav>

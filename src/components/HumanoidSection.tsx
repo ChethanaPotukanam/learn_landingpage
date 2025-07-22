@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from "react";
 
 const HumanoidSection = () => {
@@ -11,11 +10,12 @@ const HumanoidSection = () => {
 
   // More responsive timing function with shorter duration
   const cardStyle = {
-    height: '60vh',
-    maxHeight: '600px',
-    borderRadius: '20px',
-    transition: 'transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1)',
-    willChange: 'transform, opacity'
+    height: "60vh",
+    maxHeight: "600px",
+    borderRadius: "20px",
+    transition:
+      "transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1)",
+    willChange: "transform, opacity",
   };
 
   useEffect(() => {
@@ -31,25 +31,28 @@ const HumanoidSection = () => {
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-    
+
     // Optimized scroll handler using requestAnimationFrame
     const handleScroll = () => {
       if (!ticking.current) {
         lastScrollY.current = window.scrollY;
-        
+
         window.requestAnimationFrame(() => {
           if (!sectionRef.current) return;
-          
+
           const sectionRect = sectionRef.current.getBoundingClientRect();
           const viewportHeight = window.innerHeight;
           const totalScrollDistance = viewportHeight * 2;
-          
+
           // Calculate the scroll progress
           let progress = 0;
           if (sectionRect.top <= 0) {
-            progress = Math.min(1, Math.max(0, Math.abs(sectionRect.top) / totalScrollDistance));
+            progress = Math.min(
+              1,
+              Math.max(0, Math.abs(sectionRect.top) / totalScrollDistance)
+            );
           }
-          
+
           // Determine which card should be visible based on progress
           if (progress >= 0.66) {
             setActiveCardIndex(2);
@@ -58,19 +61,19 @@ const HumanoidSection = () => {
           } else {
             setActiveCardIndex(0);
           }
-          
+
           ticking.current = false;
         });
-        
+
         ticking.current = true;
       }
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll(); // Initial calculation
-    
+
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
@@ -83,37 +86,48 @@ const HumanoidSection = () => {
   const isThirdCardVisible = activeCardIndex >= 2;
 
   return (
-    <div 
-      ref={sectionRef} 
-      className="relative" 
-      style={{ height: '300vh' }}
-    >
-      <section className="w-full h-screen py-10 md:py-16 sticky top-0 overflow-hidden bg-white" id="why-humanoid">
+    <div ref={sectionRef} className="relative" style={{ height: "300vh" }}>
+      <section
+        className="w-full h-screen py-10 md:py-16 sticky top-0 overflow-hidden bg-white"
+        id="why-humanoid"
+      >
         <div className="container px-6 lg:px-8 mx-auto h-full flex flex-col">
           <div className="mb-2 md:mb-3">
             <div className="flex items-center gap-4 mb-2 md:mb-2 pt-8 sm:pt-6 md:pt-4">
-              <div className="pulse-chip opacity-0 animate-fade-in" style={{
-                animationDelay: "0.1s"
-              }}>
-                <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">02</span>
-                <span>Humanoid</span>
+              <div
+                className="pulse-chip opacity-0 animate-fade-in"
+                style={{
+                  animationDelay: "0.1s",
+                }}
+              >
+                <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">
+                  02
+                </span>
+                <span>Our Mission</span>
               </div>
             </div>
-            
+
             <h2 className="section-title text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-1 md:mb-2">
-              Why Humanoid
+              Our Mission
             </h2>
           </div>
-          
-          <div ref={cardsContainerRef} className="relative flex-1 perspective-1000">
+
+          <div
+            ref={cardsContainerRef}
+            className="relative flex-1 perspective-1000"
+          >
             {/* First Card */}
-            <div 
-              className={`absolute inset-0 overflow-hidden shadow-xl ${isFirstCardVisible ? 'animate-card-enter' : ''}`} 
+            <div
+              className={`absolute inset-0 overflow-hidden shadow-xl ${
+                isFirstCardVisible ? "animate-card-enter" : ""
+              }`}
               style={{
                 ...cardStyle,
                 zIndex: 10,
-                transform: `translateY(${isFirstCardVisible ? '90px' : '200px'}) scale(0.9)`,
-                opacity: isFirstCardVisible ? 0.9 : 0
+                transform: `translateY(${
+                  isFirstCardVisible ? "90px" : "200px"
+                }) scale(0.9)`,
+                opacity: isFirstCardVisible ? 0.9 : 0,
               }}
             >
               <div
@@ -122,34 +136,46 @@ const HumanoidSection = () => {
                   backgroundImage: "url('/background-section1.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "top center",
-                  backgroundBlendMode: "overlay"
+                  backgroundBlendMode: "overlay",
                 }}
               ></div>
-              
+
               <div className="absolute top-4 right-4 z-20">
                 <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
-                  <span className="text-sm font-medium">The vision</span>
+                  <span className="text-sm font-medium">The Problem</span>
                 </div>
               </div>
-              
-              <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-center">
-                <div className="max-w-lg">
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
-                    We're giving AI a way to navigate the physical world
+
+              <div className="relative z-10 p-6 sm:p-8 md:p-12 h-full flex items-center">
+                <div className="max-w-3xl mx-auto">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-display text-white font-bold leading-relaxed mb-4">
+                    Learning is Broken. Your Potential is Trapped.<br></br>Today's
+                    online learning is a maze of passive video lectures,
+                    one-size-fits-all curricula, and tests that measure memory,
+                    not mastery. Your potential is trapped in a model that was
+                    never built for you.<br></br> We knew there had to be a better way.
                   </h3>
                 </div>
               </div>
             </div>
-            
+
             {/* Second Card */}
-            <div 
-              className={`absolute inset-0 overflow-hidden shadow-xl ${isSecondCardVisible ? 'animate-card-enter' : ''}`} 
+            <div
+              className={`absolute inset-0 overflow-hidden shadow-xl ${
+                isSecondCardVisible ? "animate-card-enter" : ""
+              }`}
               style={{
                 ...cardStyle,
                 zIndex: 20,
-                transform: `translateY(${isSecondCardVisible ? activeCardIndex === 1 ? '55px' : '45px' : '200px'}) scale(0.95)`,
+                transform: `translateY(${
+                  isSecondCardVisible
+                    ? activeCardIndex === 1
+                      ? "55px"
+                      : "45px"
+                    : "200px"
+                }) scale(0.95)`,
                 opacity: isSecondCardVisible ? 1 : 0,
-                pointerEvents: isSecondCardVisible ? 'auto' : 'none'
+                pointerEvents: isSecondCardVisible ? "auto" : "none",
               }}
             >
               <div
@@ -158,34 +184,42 @@ const HumanoidSection = () => {
                   backgroundImage: "url('/background-section2.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
-                  backgroundBlendMode: "overlay"
+                  backgroundBlendMode: "overlay",
                 }}
               ></div>
-              
+
               <div className="absolute top-4 right-4 z-20">
                 <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
-                  <span className="text-sm font-medium">The vision</span>
+                  <span className="text-sm font-medium">Our Solution</span>
                 </div>
               </div>
-              
-              <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-center">
-                <div className="max-w-lg">
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
-                    We're bringing adaptive intelligence to where humans work
+
+              <div className="relative z-10 p-6 sm:p-8 md:p-12 h-full flex items-center">
+                <div className="max-w-3xl mx-auto">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-display text-white font-bold leading-relaxed mb-4">
+                    A Smarter Pathway Forward<br></br>We replace the traditional monologues with engaging podcast-style lessons. Our Interactive AI Tutor is a chat away 24/7 —clarifying doubts, providing targeted interventions, and ensuring you never get stuck. It's learning that is interactive, personal, and designed to keep you moving forward.<br></br>Conversations that build competence.
                   </h3>
                 </div>
               </div>
             </div>
-            
+
             {/* Third Card */}
-            <div 
-              className={`absolute inset-0 overflow-hidden shadow-xl ${isThirdCardVisible ? 'animate-card-enter' : ''}`} 
+            <div
+              className={`absolute inset-0 overflow-hidden shadow-xl ${
+                isThirdCardVisible ? "animate-card-enter" : ""
+              }`}
               style={{
                 ...cardStyle,
                 zIndex: 30,
-                transform: `translateY(${isThirdCardVisible ? activeCardIndex === 2 ? '15px' : '0' : '200px'}) scale(1)`,
+                transform: `translateY(${
+                  isThirdCardVisible
+                    ? activeCardIndex === 2
+                      ? "15px"
+                      : "0"
+                    : "200px"
+                }) scale(1)`,
                 opacity: isThirdCardVisible ? 1 : 0,
-                pointerEvents: isThirdCardVisible ? 'auto' : 'none'
+                pointerEvents: isThirdCardVisible ? "auto" : "none",
               }}
             >
               <div
@@ -194,20 +228,21 @@ const HumanoidSection = () => {
                   backgroundImage: "url('/background-section3.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "bottom center",
-                  backgroundBlendMode: "overlay"
+                  backgroundBlendMode: "overlay",
                 }}
               ></div>
-              
+
               <div className="absolute top-4 right-4 z-20">
                 <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
-                  <span className="text-sm font-medium">The vision</span>
+                  <span className="text-sm font-medium">The Outcome</span>
                 </div>
               </div>
-              
-              <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-center">
-                <div className="max-w-lg">
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
-                    We're creating companions, <span className="text-[#FC4D0A]">not replacements</span>
+
+              <div className="relative z-10 p-6 sm:p-8 md:p-12 h-full flex items-center">
+                <div className="max-w-3xl mx-auto">
+                  <h3 className="text-lg text-[#FC4D0A] sm:text-xl md:text-2xl font-display font-bold leading-relaxed mb-4">
+                    From Knowledge to Know-How{" "}<br></br>
+                    <span className="text-white">In a world being reshaped by AI, staying ahead is everything. Our goal isn't just course completion -  it's building real capability. Continuous assessment and a focus on applied skills mean you don't just finish a course—you emerge with a deep, proven understanding you can confidently apply from day one.<br></br>A Foundation for Lifelong Growth.</span>
                   </h3>
                 </div>
               </div>

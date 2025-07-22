@@ -122,10 +122,10 @@ const AdvancedCoursesCarousel = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            63+ Advanced Courses Await You
+            Unlock Your Potential: The Full Course Library
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Unlock these specialized courses after completing the foundational program
+            Our extensive library offers specialized tracks to build deep expertise after you complete the foundational program.
           </p>
         </div>
         
@@ -147,12 +147,6 @@ const AdvancedCoursesCarousel = () => {
           {/* Gradient overlays for smooth edges */}
           <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-gray-50 to-transparent pointer-events-none z-10"></div>
           <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-gray-50 to-transparent pointer-events-none z-10"></div>
-        </div>
-        
-        <div className="text-center mt-8">
-          <p className="text-sm text-gray-500">
-            Hover to pause • Continuous scrolling
-          </p>
         </div>
       </div>
       

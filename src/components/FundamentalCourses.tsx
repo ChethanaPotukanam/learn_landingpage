@@ -5,30 +5,30 @@ const FundamentalCourses = () => {
   const courses = [
     {
       id: 1,
-      title: "Generative AI Mastery",
-      description: "Master the fundamentals of generative AI, including GPT models, image generation, and prompt engineering...",
-      level: "Intermediate",
+      title: "AI for Everyone",
+      description: "Provides a comprehensive, non-technical overview of AI fundamentals, key concepts, and real-world applications across various industries.",
+      level: "Beginner",
       duration: "8 hours",
       rating: 4.9,
       students: "12,500+ students",
-      icon: <Star className="w-6 h-6 text-yellow-500" />,
+      icon:  <Users className="w-6 h-6 text-purple-500" />,
       color: "bg-yellow-50 text-yellow-600"
     },
     {
       id: 2,
-      title: "Prompt Engineering Fundamentals",
-      description: "Learn to craft effective prompts for AI systems, optimize responses, and build reliable AI workflows.",
-      level: "Beginner",
+      title: "Generative AI",
+      description: "Explores the foundations and advancements of Generative AI, moving from basic concepts to the latest models like GPT-4 and Stable Diffusion.",
+      level: "Intermediate",
       duration: "4 hours",
       rating: 4.8,
       students: "18,200+ students",
-      icon: <MessageSquare className="w-6 h-6 text-blue-500" />,
+      icon: <Star className="w-6 h-6 text-yellow-500" />,
       color: "bg-blue-50 text-blue-600"
     },
     {
       id: 3,
       title: "Intro to AI in Healthcare",
-      description: "Explore AI applications in healthcare, from diagnostic tools to personalized treatment recommendations.",
+      description: "A specialized course exploring the transformative impact of AI in the healthcare and pharmaceutical sectors, from drug discovery to patient care.",
       level: "Beginner",
       duration: "6 hours",
       rating: 4.9,
@@ -38,23 +38,35 @@ const FundamentalCourses = () => {
     },
     {
       id: 4,
-      title: "AI for Everyone",
-      description: "Non-technical introduction to AI concepts, applications, and implications for business and society.",
-      level: "Beginner",
+      title: "Mastering Prompt Engineering",
+      description: "A practical, hands-on course focused on communicating effectively with large language models (LLMs) to achieve desired, accurate outputs.",
+      level: "Intermediate",
       duration: "3 hours",
       rating: 4.7,
       students: "25,400+ students",
-      icon: <Users className="w-6 h-6 text-purple-500" />,
+      icon:<MessageSquare className="w-6 h-6 text-blue-500" />,
       color: "bg-purple-50 text-purple-600"
     }
   ];
 
   return (
     <section id="courses" className="py-16 lg:py-24 bg-gray-50">
+      {/* Header with badge and line */}
+      <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+        <div className="flex items-center gap-4 mb-8 sm:mb-16">
+          <div className="flex items-center gap-4">
+            <div className="pulse-chip">
+              <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">4</span>
+              <span>Courses - Your Path to Mastery</span>
+            </div>
+          </div>
+          <div className="flex-1 h-[1px] bg-gray-300"></div>
+        </div>
+      </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Fundamental Courses
+            Foundational Courses
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Build your AI foundation with our expertly crafted courses designed for every skill level
@@ -100,8 +112,7 @@ const FundamentalCourses = () => {
                 </div>
                 
                 <button className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg transition-all duration-200 ease-out font-medium border border-gray-300 text-gray-700 group-hover:bg-[#3B82F6] group-hover:text-white group-hover:border-[#3B82F6]">
-                  <Lock className="w-4 h-4" />
-                  <span>Unlock Course</span>
+                  <span>Explore Course</span>
                 </button>
               </div>
             </div>
