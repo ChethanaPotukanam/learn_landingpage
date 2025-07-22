@@ -5,7 +5,6 @@ import LottieAnimation from "./LottieAnimation";
 
 const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const imageRef = useRef<HTMLImageElement>(null);
   const [lottieData, setLottieData] = useState<any>(null);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -31,42 +30,6 @@ const Hero = () => {
   }, []);
 
   useEffect(() => {
-    // Skip effect on mobile
-    if (isMobile) return;
-
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!containerRef.current || !imageRef.current) return;
-
-      const { left, top, width, height } =
-        containerRef.current.getBoundingClientRect();
-      const x = (e.clientX - left) / width - 0.5;
-      const y = (e.clientY - top) / height - 0.5;
-
-      imageRef.current.style.transform = `perspective(1000px) rotateY(${
-        x * 2.5
-      }deg) rotateX(${-y * 2.5}deg) scale3d(1.02, 1.02, 1.02)`;
-    };
-
-    const handleMouseLeave = () => {
-      if (!imageRef.current) return;
-      imageRef.current.style.transform = `perspective(1000px) rotateY(0deg) rotateX(0deg) scale3d(1, 1, 1)`;
-    };
-
-    const container = containerRef.current;
-    if (container) {
-      container.addEventListener("mousemove", handleMouseMove);
-      container.addEventListener("mouseleave", handleMouseLeave);
-    }
-
-    return () => {
-      if (container) {
-        container.removeEventListener("mousemove", handleMouseMove);
-        container.removeEventListener("mouseleave", handleMouseLeave);
-      }
-    };
-  }, [isMobile]);
-
-  useEffect(() => {
     // Skip parallax on mobile
     if (isMobile) return;
 
@@ -87,108 +50,87 @@ const Hero = () => {
 
   return (
     <section
-      className="overflow-hidden relative bg-cover"
+      className="overflow-hidden relative bg-gradient-to-br from-blue-50 via-white to-purple-50 min-h-screen flex items-center justify-center"
       id="hero"
       style={{
-        // backgroundImage: 'url("/Header-background.webp")',
         backgroundPosition: "center 30%",
         padding: isMobile ? "100px 12px 40px" : "120px 20px 60px",
       }}
     >
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Floating Orbs */}
+        <div className="absolute top-20 left-10 w-32 h-32 bg-blue-400/20 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-48 h-48 bg-purple-400/15 rounded-full blur-2xl animate-bounce" style={{animationDuration: '3s'}}></div>
+        <div className="absolute bottom-32 left-1/4 w-40 h-40 bg-indigo-400/20 rounded-full blur-xl animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/3 right-1/3 w-24 h-24 bg-cyan-400/25 rounded-full blur-lg animate-bounce" style={{animationDuration: '4s', animationDelay: '0.5s'}}></div>
+        
+        {/* Animated Gradient Blobs */}
+        <div className="absolute -top-20 -left-20 w-96 h-96 bg-gradient-to-r from-blue-300/30 to-purple-300/30 rounded-full blur-3xl animate-spin" style={{animationDuration: '20s'}}></div>
+        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-gradient-to-r from-purple-300/25 to-pink-300/25 rounded-full blur-3xl animate-spin" style={{animationDuration: '25s', animationDirection: 'reverse'}}></div>
+        
+        {/* Floating Particles */}
+        <div className="absolute top-1/4 left-1/5 w-2 h-2 bg-blue-500/40 rounded-full animate-ping"></div>
+        <div className="absolute top-3/4 right-1/4 w-3 h-3 bg-purple-500/30 rounded-full animate-ping" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/2 left-3/4 w-1 h-1 bg-indigo-500/50 rounded-full animate-ping" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/6 right-1/6 w-2 h-2 bg-cyan-500/40 rounded-full animate-ping" style={{animationDelay: '3s'}}></div>
+      </div>
+      
       <div className="absolute -top-[10%] -right-[5%] w-1/2 h-[70%] bg-pulse-gradient opacity-20 blur-3xl rounded-full"></div>
 
-      <div className="container px-4 sm:px-6 lg:px-8" ref={containerRef}>
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center">
-          <div className="w-full lg:w-1/2">
-            <div
-              className="pulse-chip mb-3 sm:mb-6 opacity-0 animate-fade-in"
-              style={{ animationDelay: "0.1s" }}
-            >
-              <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">
-                01
-              </span>
+      <div className="container px-4 sm:px-6 lg:px-8 relative z-10" ref={containerRef}>
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+          {/* Header with badge and line */}
+      <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+        <div className="flex items-center gap-4 mb-8 sm:mb-16">
+          <div className="flex items-center gap-4">
+            <div className="pulse-chip">
+              <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">01</span>
               <span>Purpose</span>
             </div>
-
-            <h1
-              className="section-title text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight opacity-0 animate-fade-in flex items-center justify-center flex-wrap gap-3 sm:gap-4"
-              style={{ animationDelay: "0.3s" }}
-            >
-              <img
-                src="/ai_prof.png"
-                alt="ai.prof logo"
-                className="h-12 sm:h-16 lg:h-20 xl:h-24 w-auto"
-              />
-              <span>
-                Future-proof
-                <br className="hidden sm:inline" />
-                Your Career
-              </span>
-            </h1>
-
-            <p
-              style={{ animationDelay: "0.5s" }}
-              className="section-subtitle mt-3 sm:mt-6 mb-4 sm:mb-8 leading-relaxed opacity-0 animate-fade-in text-gray-950 font-normal text-base sm:text-lg text-left"
-            >
-              The AI-Powered Personalized Learning Platform that guides you from
-              foundational knowledge to demonstrable mastery.
-            </p>
-
-            <div
-              className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in"
-              style={{ animationDelay: "0.7s" }}
-            >
-              <a
-                href="#courses"
-                className="flex items-center justify-center group w-full sm:w-auto text-center"
-                style={{
-                  backgroundColor: "#0066FF",
-                  borderRadius: "1440px",
-                  boxSizing: "border-box",
-                  color: "#FFFFFF",
-                  cursor: "pointer",
-                  fontSize: "14px",
-                  lineHeight: "20px",
-                  padding: "16px 24px", // Slightly reduced padding for mobile
-                  border: "1px solid white",
-                }}
-              >
-                Start Your Journey
-                <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </a>
-            </div>
           </div>
+        </div>
+      </div>
 
-          <div className="w-full lg:w-1/2 relative mt-6 lg:mt-0">
-            {lottieData ? (
-              <div
-                className="relative z-10 animate-fade-in"
-                style={{ animationDelay: "0.9s" }}
-              >
-                <LottieAnimation
-                  animationPath={lottieData}
-                  className="w-full h-auto max-w-lg mx-auto"
-                  loop={true}
-                  autoplay={true}
-                />
-              </div>
-            ) : (
-              <>
-                <div className="absolute inset-0 bg-dark-900 rounded-2xl sm:rounded-3xl -z-10 shadow-xl"></div>
-                <div className="relative transition-all duration-500 ease-out overflow-hidden rounded-2xl sm:rounded-3xl shadow-2xl">
-                  <img
-                    ref={imageRef}
-                    // src="/lovable-uploads/5663820f-6c97-4492-9210-9eaa1a8dc415.png"
-                    src="/hero.png"
-                    alt="Atlas Robot"
-                    className="w-full h-auto object-cover transition-transform duration-500 ease-out"
-                    style={{
-                      transformStyle: "preserve-3d",
-                    }}
-                  />
-                </div>
-              </>
-            )}
+          <h1
+            className="section-title text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight opacity-0 animate-fade-in flex items-center justify-center flex-wrap gap-3 sm:gap-4"
+            style={{ animationDelay: "0.3s" }}
+          >
+            <span>
+              Future-proof Your Career
+            </span>
+          </h1>
+
+          <p
+            style={{ animationDelay: "0.5s" }}
+            className="section-subtitle mt-3 sm:mt-6 mb-4 sm:mb-8 leading-relaxed opacity-0 animate-fade-in text-gray-950 font-normal text-base sm:text-lg"
+          >
+            The AI-Powered Personalized Learning Platform that guides you from
+            foundational knowledge to demonstrable mastery.
+          </p>
+
+          <div
+            className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in justify-center"
+            style={{ animationDelay: "0.7s" }}
+          >
+            <a
+              href="#courses"
+              className="flex items-center justify-center group w-full sm:w-auto text-center"
+              style={{
+                backgroundColor: "#0066FF",
+                borderRadius: "1440px",
+                boxSizing: "border-box",
+                color: "#FFFFFF",
+                cursor: "pointer",
+                fontSize: "14px",
+                lineHeight: "20px",
+                padding: "16px 24px",
+                border: "1px solid white",
+              }}
+            >
+              Start Your Journey
+              <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </a>
           </div>
         </div>
       </div>
