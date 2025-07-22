@@ -71,16 +71,16 @@ const Index = () => {
         {/* <RobotShowcaseSection /> */}
         <HumanoidSection />
         <Features />
-        {/* <SpecsSection /> */}
         <FundamentalCourses />
         <AdvancedCoursesCarousel />
         <BusinessSection /> 
         <Testimonials />
         <CompareSection />
-        <MadeByHumans />
+        <SpecsSection />
         <Newsletter />  
       </main>
       <Footer />
+      <MadeByHumans />
     </div>
   );
 };
