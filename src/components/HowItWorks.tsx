@@ -46,7 +46,7 @@ const HowItWorks = () => {
   const [activeStep, setActiveStep] = React.useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
   const stepsData = [
-    {
+    { 
       number: "01",
       title: "Request Access",
       description: "Fill out the application form to join our early access program and secure your spot in line.",

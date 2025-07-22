@@ -13,6 +13,7 @@ import Features from "@/components/Features";
 import Testimonials from "@/components/Testimonials";
 import Newsletter from "@/components/Newsletter";
 import MadeByHumans from "@/components/MadeByHumans";
+import BusinessSection from "@/components/BusinessSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -73,6 +74,7 @@ const Index = () => {
         {/* <SpecsSection /> */}
         <FundamentalCourses />
         <AdvancedCoursesCarousel />
+        <BusinessSection /> 
         <Testimonials />
         <CompareSection />
         <MadeByHumans />
