@@ -94,11 +94,11 @@ const Features = () => {
           <div className="flex items-center gap-4 mb-8 sm:mb-16">
           <div className="flex items-center gap-4">
             <div className="pulse-chip">
-              <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">3</span>
+              <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">03</span>
               <span>How It Works</span>
             </div>
           </div>
-          <div className="flex-1 h-[1px] bg-gray-300"></div>
+          {/* <div className="flex-1 h-[1px] bg-gray-300"></div> */}
         </div>
           <h2 className="section-title mb-3 sm:mb-4 opacity-0 fade-in-element">
             The Technology<br className="hidden sm:block" /> That Powers Your Journey
@@ -123,7 +123,7 @@ const Features = () => {
           />
           <FeatureCard
             icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 sm:w-6 sm:h-6"><rect width="18" height="11" x="3" y="11" rx="2"></rect><circle cx="12" cy="5" r="2"></circle><path d="M12 7v4"></path><line x1="8" x2="8" y1="16" y2="16"></line><line x1="16" x2="16" y1="16" y2="16"></line></svg>}
-            title="Continuous & Authentic Assessment"
+            title="Continuous Assessment"
             description=" Beyond quizzes, your mastery is evaluated continuously through your dialogue with the AI Tutor. This authenticates your skills in a way that's harder to game, leading to highly credible certifications."
             index={2}
           />
@@ -141,7 +141,7 @@ const Features = () => {
           />
           <FeatureCard
             icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 sm:w-6 sm:h-6"><path d="M16 6H3v11a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1h-2"></path><path d="M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2"></path><line x1="12" x2="12" y1="11" y2="15"></line><line x1="10" x2="14" y1="13" y2="13"></line></svg>}
-            title="Unbiased, High-Quality Content"
+            title="High-Quality Content"
             description="We offer curated, high-quality content that is platform-neutral. Our focus is on broadly applicable skills, not training for a specific vendor's tools, ensuring your knowledge is valuable everywhere."
             index={5}
           />

@@ -50,25 +50,25 @@ const FundamentalCourses = () => {
   ];
 
   return (
-    <section id="courses" className="py-16 lg:py-24 bg-gray-50">
+    <section id="courses" className="py-16 lg:py-24 bg-gray-50 font-sans">
       {/* Header with badge and line */}
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
         <div className="flex items-center gap-4 mb-8 sm:mb-16">
           <div className="flex items-center gap-4">
-            <div className="pulse-chip">
-              <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">4</span>
+            <div className="pulse-chip font-sans">
+              <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">04</span>
               <span>Courses - Your Path to Mastery</span>
             </div>
           </div>
-          <div className="flex-1 h-[1px] bg-gray-300"></div>
+          {/* <div className="flex-1 h-[1px] bg-gray-300"></div> */}
         </div>
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-display">
             Foundational Courses
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto font-sans">
             Build your AI foundation with our expertly crafted courses designed for every skill level
           </p>
         </div>
@@ -77,41 +77,41 @@ const FundamentalCourses = () => {
           {courses.map((course) => (
             <div 
               key={course.id} 
-              className="bg-white rounded-2xl border border-gray-200 hover:border-[#3B82F6] shadow-sm hover:shadow-md transition-all duration-300 ease-out p-6 group cursor-pointer flex flex-col h-full"
+              className="bg-white rounded-2xl border border-gray-200 hover:border-[#3B82F6] shadow-sm hover:shadow-md transition-all duration-300 ease-out p-6 group cursor-pointer flex flex-col h-full font-sans"
             >
               <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl ${course.color} mb-4 transition-all duration-200`}>
                 {course.icon}
               </div>
               
-              <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2 font-display">
                 {course.title}
               </h3>
               
               <div className="flex-grow mb-4">
-                <p className="text-gray-600 text-sm line-clamp-3">
+                <p className="text-gray-600 text-sm line-clamp-3 font-sans">
                   {course.description}
                 </p>
               </div>
               
               <div className="mt-auto">
                 <div className="flex items-center gap-2 mb-3">
-                  <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                  <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium font-sans ${
                     course.level === 'Beginner' ? 'bg-green-100 text-green-800' : 'bg-orange-100 text-orange-800'
                   }`}>
                     {course.level}
                   </span>
-                  <span className="text-sm text-gray-500">{course.duration}</span>
+                  <span className="text-sm text-gray-500 font-sans">{course.duration}</span>
                 </div>
                 
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-1">
                     <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <span className="text-sm font-medium text-gray-900">{course.rating}</span>
+                    <span className="text-sm font-medium text-gray-900 font-sans">{course.rating}</span>
                   </div>
-                  <span className="text-sm text-gray-500">{course.students}</span>
+                  <span className="text-sm text-gray-500 font-sans">{course.students}</span>
                 </div>
                 
-                <button className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg transition-all duration-200 ease-out font-medium border border-gray-300 text-gray-700 group-hover:bg-[#3B82F6] group-hover:text-white group-hover:border-[#3B82F6]">
+                <button className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg transition-all duration-200 ease-out font-medium border border-gray-300 text-gray-700 group-hover:bg-[#3B82F6] group-hover:text-white group-hover:border-[#3B82F6] font-sans">
                   <span>Explore Course</span>
                 </button>
               </div>
