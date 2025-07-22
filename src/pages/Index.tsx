@@ -76,7 +76,7 @@ const Index = () => {
         <Testimonials />
         <CompareSection />
         <Newsletter />
-        {/* <MadeByHumans /> */}
+        <MadeByHumans />
       </main>
       <Footer />
     </div>

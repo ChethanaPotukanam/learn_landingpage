@@ -1,32 +1,29 @@
-import React from "react";
-
 const Footer = () => {
   return (
-    <footer className="w-full bg-slate-900 py-6">
+    <footer className="w-full bg-white py-2">
       <div className="section-container">
-        <div className="flex flex-col items-center space-y-3">
-          {/* Logo */}
-          <div className="flex items-center">
-            <img 
-              src="/ai_prof.png" 
-              alt="AI.Prof Logo" 
-              className="w-20 h-20 object-contain"
-            />
-          </div>
-          
-          {/* Copyright */}
-          <p className="text-gray-400 text-sm">
-            © 2025 HITLOOP. All rights reserved.
-          </p>
-          
-          {/* Tagline */}
-          <p className="text-gray-400 text-sm text-center max-w-md">
-            Empowering educational excellence with AI-driven learning and training solutions
+        {/* ai.prof logo in footer */}
+        <div className="flex justify-center mb-3">
+          <img src="/ai_prof.png" alt="ai.prof logo" className="h-8 w-auto" />
+        </div>
+
+        {/* Attribution text */}
+        <p className="text-center text-gray-600 text-base mb-2">
+          © Hitloop 2025. All rights reserved.
+        </p>
+
+        {/* Additional branding line */}
+        <div className="text-center">
+          <p className="text-sm text-gray-500">
+            Powered by{" "}
+            <span className="text-transparent bg-gradient-to-r from-blue-600 to-pink-500 bg-clip-text font-semibold">
+              ai.prof
+            </span>{" "}
+            - Where AI meets expertise
           </p>
         </div>
       </div>
     </footer>
   );
 };
-
 export default Footer;
