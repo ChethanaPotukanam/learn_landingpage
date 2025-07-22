@@ -14,9 +14,9 @@ const Footer = () => {
 
         {/* Additional branding line */}
         <div className="text-center">
-          <p className="text-sm text-blue-500 font-brockmann  ">
+          {/* <p className="text-sm text-blue-500 font-brockmann  ">
             Made By AI &amp; Human → AI * Human
-          </p>
+          </p> */}
         </div>
       </div>
     </footer>

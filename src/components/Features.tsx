@@ -102,7 +102,7 @@ const Features = () => {
     >
       <div className="section-container">
         <div className="text-center mb-10 sm:mb-16">
-          <h2 className="section-title mb-3 sm:mb-4 opacity-0 fade-in-element">
+          <h2 className="section-title mb-3 sm:mb-4 leading-none sm:leading-tight opacity-0 fade-in-element">
             The Technology
             <br className="hidden sm:block" /> That Powers Your Journey
           </h2>

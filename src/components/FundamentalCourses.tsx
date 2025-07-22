@@ -38,7 +38,7 @@ const FundamentalCourses = () => {
     },
     {
       id: 4,
-      title: "Mastering Prompt Engineering",
+      title: "Prompt Engineering",
       description: "A practical, hands-on course focused on communicating effectively with large language models (LLMs) to achieve desired, accurate outputs.",
       level: "Intermediate",
       duration: "3 hours",

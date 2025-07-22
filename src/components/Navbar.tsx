@@ -57,7 +57,7 @@ const Navbar = () => {
           <img 
             src="/ai_prof.png" 
             alt="ai.prof Logo" 
-            className="h-10 sm:h-12" 
+            className="h-12 sm:h-14" 
           />
         </a>
 

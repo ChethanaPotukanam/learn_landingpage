@@ -82,6 +82,14 @@ const AdvancedCoursesCarousel = () => {
   // Duplicate the courses for seamless looping
   const duplicatedCourses = [...advancedCourses, ...advancedCourses];
 
+  const handleMouseEnter = () => {
+    setIsPaused(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsPaused(false);
+  };
+
   const CourseCard = ({ course }) => (
     <div className="flex-shrink-0 w-80 mx-4">
       <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden h-full border border-gray-100">
@@ -129,15 +137,18 @@ const AdvancedCoursesCarousel = () => {
           </p>
         </div>
         
-        <div className="relative max-w-7xl mx-auto overflow-hidden">
+        <div 
+          className="relative max-w-7xl mx-auto overflow-hidden"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           <div 
-            className="flex"
+            className="flex scrolling-container"
             style={{
-              animation: isPaused ? 'none' : 'scroll 40s linear infinite',
+              animation: 'scroll 40s linear infinite',
+              animationPlayState: isPaused ? 'paused' : 'running',
               width: 'fit-content'
             }}
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
           >
             {duplicatedCourses.map((course, index) => (
               <CourseCard key={`${course.id}-${index}`} course={course} />

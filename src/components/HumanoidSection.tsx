@@ -86,7 +86,7 @@ const HumanoidSection = () => {
   const isThirdCardVisible = activeCardIndex >= 2;
 
   return (
-    <div ref={sectionRef} className="relative" style={{ height: "300vh" }}>
+    <div id="ourmission" ref={sectionRef} className="relative" style={{ height: "300vh" }}>
       <section
         className="w-full h-screen py-10 md:py-16 sticky top-0 overflow-hidden bg-white"
         id="why-humanoid"
@@ -243,7 +243,7 @@ const HumanoidSection = () => {
                       building real capability. Continuous assessment and a
                       focus on applied skills mean you don't just finish a
                       course—you emerge with a deep, proven understanding you
-                      can confidently apply from day one.<br></br>A Foundation
+                      can confidently apply from day one.<br></br><br></br>A Foundation
                       for Lifelong Growth.
                     </span>
                   </h3>

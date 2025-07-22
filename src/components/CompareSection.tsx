@@ -71,7 +71,7 @@ const CompareSection = () => {
 
   const getStatusIcon = (value: string, isAiProf: boolean = false) => {
     if (isAiProf) {
-      return <Check className="w-4 h-4 text-blue-600" />;
+      return <Check className="w-5 h-5 text-blue-600 flex-shrink-0" />;
     }
 
     const lowerValue = value.toLowerCase();
@@ -81,16 +81,16 @@ const CompareSection = () => {
       lowerValue.includes("limited") ||
       lowerValue.includes("slow")
     ) {
-      return <X className="w-4 h-4 text-red-500" />;
+      return <X className="w-5 h-5 text-red-500 flex-shrink-0" />;
     }
     if (
       lowerValue.includes("minimal") ||
       lowerValue.includes("basic") ||
       lowerValue.includes("medium")
     ) {
-      return <Minus className="w-4 h-4 text-yellow-500" />;
+      return <Minus className="w-5 h-5 text-yellow-500 flex-shrink-0" />;
     }
-    return <Check className="w-4 h-4 text-green-500" />;
+    return <Check className="w-5 h-5 text-green-500 flex-shrink-0" />;
   };
 
   return (
@@ -112,19 +112,19 @@ const CompareSection = () => {
                 <th className="text-left py-4 px-6 font-semibold text-gray-900">
                   Feature
                 </th>
-                <th className="text-center py-4 px-6 font-semibold text-blue-600">
+                <th className="text-left py-4 px-6 font-semibold text-blue-600">
                   ai.prof
                 </th>
-                <th className="text-center py-4 px-6 font-semibold text-gray-600">
+                <th className="text-left py-4 px-6 font-semibold text-gray-600">
                   MOOCs
                 </th>
-                <th className="text-center py-4 px-6 font-semibold text-gray-600">
+                <th className="text-left py-4 px-6 font-semibold text-gray-600">
                   LMS/LXPs
                 </th>
-                <th className="text-center py-4 px-6 font-semibold text-gray-600">
+                <th className="text-left py-4 px-6 font-semibold text-gray-600">
                   Authoring Tools
                 </th>
-                <th className="text-center py-4 px-6 font-semibold text-gray-600">
+                <th className="text-left py-4 px-6 font-semibold text-gray-600">
                   Bootcamps
                 </th>
               </tr>
@@ -138,38 +138,38 @@ const CompareSection = () => {
                   <td className="py-4 px-6 font-medium text-gray-900">
                     {item.feature}
                   </td>
-                  <td className="py-4 px-6 text-center">
-                    <div className="flex items-center justify-center gap-2">
+                  <td className="py-4 px-6">
+                    <div className="flex items-start gap-3">
                       {getStatusIcon(item.aiprof, true)}
                       <span className="text-sm text-blue-600 font-medium">
                         {item.aiprof}
                       </span>
                     </div>
                   </td>
-                  <td className="py-4 px-6 text-center">
-                    <div className="flex items-center justify-center gap-2">
+                  <td className="py-4 px-6">
+                    <div className="flex items-start gap-3">
                       {getStatusIcon(item.moocs)}
                       <span className="text-sm text-gray-600">
                         {item.moocs}
                       </span>
                     </div>
                   </td>
-                  <td className="py-4 px-6 text-center">
-                    <div className="flex items-center justify-center gap-2">
+                  <td className="py-4 px-6">
+                    <div className="flex items-start gap-3">
                       {getStatusIcon(item.lms)}
                       <span className="text-sm text-gray-600">{item.lms}</span>
                     </div>
                   </td>
-                  <td className="py-4 px-6 text-center">
-                    <div className="flex items-center justify-center gap-2">
+                  <td className="py-4 px-6">
+                    <div className="flex items-start gap-3">
                       {getStatusIcon(item.authoring)}
                       <span className="text-sm text-gray-600">
                         {item.authoring}
                       </span>
                     </div>
                   </td>
-                  <td className="py-4 px-6 text-center">
-                    <div className="flex items-center justify-center gap-2">
+                  <td className="py-4 px-6">
+                    <div className="flex items-start gap-3">
                       {getStatusIcon(item.bootcamps)}
                       <span className="text-sm text-gray-600">
                         {item.bootcamps}

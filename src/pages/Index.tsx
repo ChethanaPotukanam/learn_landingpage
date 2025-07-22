@@ -80,7 +80,7 @@ const Index = () => {
         <Newsletter />  
       </main>
       <Footer />
-      <MadeByHumans />
+      {/* <MadeByHumans /> */}
     </div>
   );
 };
