@@ -8,18 +8,14 @@ const Footer = () => {
         </div>
 
         {/* Attribution text */}
-        <p className="text-center text-gray-600 text-base mb-2">
+        <p className="text-center text-gray-600 text-base mb-2 font-brockmann">
           © Hitloop 2025. All rights reserved.
         </p>
 
         {/* Additional branding line */}
         <div className="text-center">
-          <p className="text-sm text-gray-500">
-            Powered by{" "}
-            <span className="text-transparent bg-gradient-to-r from-blue-600 to-pink-500 bg-clip-text font-semibold">
-              ai.prof
-            </span>{" "}
-            - Where AI meets expertise
+          <p className="text-sm text-blue-500 font-brockmann  ">
+            Made By AI &amp; Human → AI * Human
           </p>
         </div>
       </div>

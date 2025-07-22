@@ -91,7 +91,7 @@ const Hero = () => {
 
           <p
             style={{ animationDelay: "0.5s" }}
-            className="section-subtitle mt-3 sm:mt-6 mb-4 sm:mb-8 leading-relaxed opacity-0 animate-fade-in text-gray-950 font-normal text-base sm:text-lg"
+            className="section-subtitle mt-3 sm:mt-6 mb-4 sm:mb-8 leading-relaxed opacity-0 animate-fade-in text-gray-950 font-brockmann text-base sm:text-lg"
           >
             The AI-Powered Personalized Learning Platform that guides you from
             foundational knowledge to demonstrable mastery.
@@ -103,7 +103,7 @@ const Hero = () => {
           >
             <a
               href="#courses"
-              className="flex items-center justify-center group w-full sm:w-auto text-center"
+              className="flex items-center justify-center group w-full sm:w-auto text-center font-brockmann"
               style={{
                 backgroundColor: "#0066FF",
                 borderRadius: "1440px",

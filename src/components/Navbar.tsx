@@ -63,7 +63,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          <nav className="flex space-x-8">
+          <nav className="flex space-x-8 font-brockmann">
             <a 
               href="#" 
               className="nav-link"
@@ -74,13 +74,13 @@ const Navbar = () => {
             >
               Home
             </a>
-            <a href="#ourmission" className="nav-link">Our Mission</a>
-            <a href="#courses" className="nav-link">Courses</a>
-            <a href="#forbusiness" className="nav-link">For Business</a>
-            <a href="#joinwaitlist" className="nav-link">Join Waitlist</a>
+            <a href="#ourmission" className="nav-link font-brockmann">Our Mission</a>
+            <a href="#courses" className="nav-link font-brockmann">Courses</a>
+            <a href="#forbusiness" className="nav-link font-brockmann">For Business</a>
+            <a href="#joinwaitlist" className="nav-link font-brockmann">Join Waitlist</a>
           </nav>
           <div className="flex space-x-4">
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-brockmann">
               Login
             </button>
           </div>

@@ -128,7 +128,7 @@ const HumanoidSection = () => {
 
               <div className="absolute top-4 right-4 z-20">
                 <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
-                  <span className="text-sm font-medium">The Problem</span>
+                  <span className="text-sm font-medium font-brockmann">The Problem</span>
                 </div>
               </div>
 
@@ -177,7 +177,7 @@ const HumanoidSection = () => {
 
               <div className="absolute top-4 right-4 z-20">
                 <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
-                  <span className="text-sm font-medium">Our Solution</span>
+                  <span className="text-sm font-medium font-brockmann">Our Solution</span>
                 </div>
               </div>
 
@@ -228,7 +228,7 @@ const HumanoidSection = () => {
 
               <div className="absolute top-4 right-4 z-20">
                 <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
-                  <span className="text-sm font-medium">The Outcome</span>
+                  <span className="text-sm font-medium font-brockmann">The Outcome</span>
                 </div>
               </div>
 

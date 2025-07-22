@@ -149,7 +149,7 @@ export default {
         brockmann: ["Brockmann", "serif"],
         playfair: ['"Playfair Display"', "serif"],
       },
-      boxShadow: {
+      boxShadow: { 
         elegant: "0 4px 20px rgba(0, 0, 0, 0.08)",
         "elegant-hover": "0 8px 30px rgba(0, 0, 0, 0.12)",
       },

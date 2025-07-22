@@ -52,10 +52,10 @@ const TestimonialCard = ({
       <div className="absolute top-0 right-0 w-24 h-24 bg-white z-10"></div>
       
       <div className="relative z-0">
-        <p className="text-xl mb-8 font-medium leading-relaxed pr-20">{`"${content}"`}</p>
+        <p className="text-xl mb-8 font-medium leading-relaxed pr-20 font-brockmann">{`"${content}"`}</p>
         <div>
-          <h4 className="font-semibold text-xl">{author}</h4>
-          <p className="text-white/80">{role}</p>
+          <h4 className="font-semibold text-xl font-brockmann">{author}</h4>
+          <p className="text-white/80 font-brockmann">{role}</p>
         </div>
       </div>
     </div>;

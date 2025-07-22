@@ -87,18 +87,18 @@ const AdvancedCoursesCarousel = () => {
       <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden h-full border border-gray-100">
         {/* Header with tag */}
         <div className="p-4 pb-3">
-          <div className="flex items-center justify-between mb-3">
+          <div className="flex items-center justify-between mb-3 font-brockmann">
             <span className={`inline-flex items-center px-2 py-1 rounded-md text-xs font-medium text-white ${course.tagColor}`}>
               {course.tag}
             </span>
-            <span className="text-xs text-gray-500 font-medium">{course.duration}</span>
+            <span className="text-xs text-gray-500 font-medium font-brockmann">{course.duration}</span>
           </div>
           
-          <h3 className="text-base font-semibold text-gray-900 mb-2 leading-tight line-clamp-2">
+          <h3 className="text-base font-semibold text-gray-900 mb-2 leading-tight line-clamp-2 font-brockmann">
             {course.title}
           </h3>
           
-          <p className="text-gray-600 text-xs leading-relaxed line-clamp-2">
+          <p className="text-gray-600 text-xs leading-relaxed line-clamp-2 font-brockmann">
             {course.description}
           </p>
         </div>
@@ -108,9 +108,9 @@ const AdvancedCoursesCarousel = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-1">
               <Lock className="w-3 h-3 text-orange-500" />
-              <span className="text-xs font-medium text-orange-600">Locked</span>
+              <span className="text-xs font-medium text-orange-600 font-brockmann">Locked</span>
             </div>
-            <span className="text-xs text-gray-500">Complete foundations first</span>
+            <span className="text-xs text-gray-500 font-brockmann">Complete foundations first</span>
           </div>
         </div>
       </div>
@@ -121,10 +121,10 @@ const AdvancedCoursesCarousel = () => {
     <section className="py-16 lg:py-24 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-brockmann">
             Unlock Your Potential: The Full Course Library
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto font-brockmann">
             Our extensive library offers specialized tracks to build deep expertise after you complete the foundational program.
           </p>
         </div>

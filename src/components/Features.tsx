@@ -106,14 +106,14 @@ const Features = () => {
             The Technology
             <br className="hidden sm:block" /> That Powers Your Journey
           </h2>
-          <p className="section-subtitle mx-auto opacity-0 fade-in-element">
+          <p className="section-subtitle mx-auto opacity-0 fade-in-element font-brockmann">
             Our vision is made real through cutting-edge AI designed to
             understand your learning style, adapt to your needs, and guide you
             forward.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 font-brockmann">
           <FeatureCard
             icon={<MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />}
             title="Interactive AI Tutor"

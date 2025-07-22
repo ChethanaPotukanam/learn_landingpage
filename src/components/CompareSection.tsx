@@ -97,16 +97,16 @@ const CompareSection = () => {
     <section className="py-16 lg:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-brockmann">
             Why We're <span className="text-blue-600">Different?</span>
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 font-brockmann">
             See how ai.prof stacks up against traditional learning solutions
           </p>
         </div>
 
         <div className="overflow-x-auto">
-          <table className="w-full border-collapse bg-white rounded-lg shadow-sm">
+          <table className="w-full border-collapse bg-white rounded-lg shadow-sm font-brockmann">
             <thead>
               <tr className="border-b border-gray-200">
                 <th className="text-left py-4 px-6 font-semibold text-gray-900">
@@ -182,7 +182,7 @@ const CompareSection = () => {
           </table>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 font-brockmann">
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 text-center">
             <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
               <Check className="w-6 h-6 text-white" />
