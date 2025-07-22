@@ -91,7 +91,7 @@ const Hero = () => {
       className="overflow-hidden relative bg-cover" 
       id="hero" 
       style={{
-        backgroundImage: 'url("/Header-background.webp")',
+        // backgroundImage: 'url("/Header-background.webp")',
         backgroundPosition: 'center 30%', 
         padding: isMobile ? '100px 12px 40px' : '120px 20px 60px'
       }}
@@ -164,7 +164,8 @@ const Hero = () => {
               <div className="relative transition-all duration-500 ease-out overflow-hidden rounded-2xl sm:rounded-3xl shadow-2xl">
                 <img 
                   ref={imageRef} 
-                  src="/lovable-uploads/5663820f-6c97-4492-9210-9eaa1a8dc415.png" 
+                  // src="/lovable-uploads/5663820f-6c97-4492-9210-9eaa1a8dc415.png" 
+                  src = "/hero.png"
                   alt="Atlas Robot" 
                   className="w-full h-auto object-cover transition-transform duration-500 ease-out" 
                   style={{ transformStyle: 'preserve-3d' }} 

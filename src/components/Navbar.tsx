@@ -55,7 +55,7 @@ const Navbar = () => {
           aria-label="ai.prof"
         >
           <img 
-            src="/lovable-uploads/c1a6c352-e531-4e34-8118-8bec60195fa5.png" 
+            src="/ai_prof.png" 
             alt="ai.prof Logo" 
             className="h-10 sm:h-12" 
           />
