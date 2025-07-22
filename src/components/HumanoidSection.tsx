@@ -134,7 +134,7 @@ const HumanoidSection = () => {
 
               <div className="relative z-10 p-6 sm:p-8 md:p-12 h-full flex items-center">
                 <div className="max-w-3xl mx-auto">
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-display text-white font-bold leading-relaxed mb-4">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-display text-center text-white font-bold leading-relaxed mb-4">
                     Learning is Broken. Your Potential is Trapped.<br></br>
                     <br></br>Today's online learning is a maze of passive video
                     lectures, one-size-fits-all curricula, and tests that
@@ -183,7 +183,7 @@ const HumanoidSection = () => {
 
               <div className="relative z-10 p-6 sm:p-8 md:p-12 h-full flex items-center">
                 <div className="max-w-3xl mx-auto">
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-display text-white font-bold leading-relaxed mb-4">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-display text-center text-white font-bold leading-relaxed mb-4">
                     A Smarter Pathway Forward<br></br>
                     <br></br>We replace the traditional monologues with engaging
                     podcast-style lessons. Our Interactive AI Tutor is a chat
@@ -234,7 +234,7 @@ const HumanoidSection = () => {
 
               <div className="relative z-10 p-6 sm:p-8 md:p-12 h-full flex items-center">
                 <div className="max-w-3xl mx-auto">
-                  <h3 className="text-lg text-white sm:text-xl md:text-2xl font-display font-bold leading-relaxed mb-4">
+                  <h3 className="text-lg text-white sm:text-xl md:text-2xl text-center font-display font-bold leading-relaxed mb-4">
                     From Knowledge to Know-How <br></br>
                     <br></br>
                     <span className="text-white">
