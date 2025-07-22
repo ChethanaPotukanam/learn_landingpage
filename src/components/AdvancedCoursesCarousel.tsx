@@ -6,65 +6,65 @@ const AdvancedCoursesCarousel = () => {
 
   const advancedCourses = [
     {
-      id: 1,
-      title: "Conversational AI",
-      description: "Advanced course covering specialized topics in nlp.",
-      duration: "8 weeks",
-      tag: "NLP",
-      tagColor: "bg-blue-500",
-      locked: true
-    },
-    {
-      id: 2,
-      title: "AI in Drug Discovery",
-      description: "Advanced course covering specialized topics in healthcare.",
-      duration: "10 weeks",
-      tag: "Healthcare",
-      tagColor: "bg-green-500",
-      locked: true
-    },
-    {
-      id: 3,
-      title: "Autonomous Systems",
-      description: "Advanced course covering specialized topics in robotics.",
-      duration: "12 weeks",
-      tag: "Robotics",
-      tagColor: "bg-purple-500",
-      locked: true
-    },
-    {
-      id: 4,
-      title: "AI Art & Creativity",
-      description: "Advanced course covering specialized topics in creative.",
-      duration: "14 weeks",
-      tag: "Creative",
-      tagColor: "bg-pink-500",
-      locked: true
-    },
-    {
-      id: 5,
-      title: "Deep Learning Fundamentals",
-      description: "Advanced course covering specialized topics in machine learning.",
-      duration: "12 weeks",
-      tag: "Machine Learning",
-      tagColor: "bg-indigo-500",
-      locked: true
-    },
-    {
-      id: 6,
-      title: "Computer Vision Applications",
-      description: "Advanced course covering specialized topics in cv.",
-      duration: "10 weeks",
-      tag: "CV",
-      tagColor: "bg-teal-500",
-      locked: true
-    },
+    id: 1,
+    title: "Reasoning Models",
+    description: "Explore AI models that mimic human thought for complex problem-solving.",
+    duration: "12 weeks",
+    tag: "Advanced AI",
+    tagColor: "bg-blue-500",
+    locked: true
+  },
+  {
+    id: 2,
+    title: "Data Engineering and Big Data",
+    description: "Master database fundamentals, SQL, and integration with ML tools.",
+    duration: "10 weeks",
+    tag: "Data & MLOps",
+    tagColor: "bg-yellow-500",
+    locked: true
+  },
+  {
+    id: 3,
+    title: "Natural Language Processing",
+    description: "Apply advanced techniques like Transformers and BERT to real-world NLP applications.",
+    duration: "8 weeks",
+    tag: "Advanced AI",
+    tagColor: "bg-blue-500",
+    locked: true
+  },
+  {
+    id: 4,
+    title: "AI in Medical Research and Drug Discovery",
+    description: "Dive into how AI is accelerating the pipeline for new therapeutics.",
+    duration: "10 weeks",
+    tag: "AI in Healthcare",
+    tagColor: "bg-green-500",
+    locked: true
+  },
+  {
+    id: 5,
+    title: "Computer Vision",
+    description: "Gain hands-on experience with CNNs, YOLO, and transfer learning for practical applications.",
+    duration: "12 weeks",
+    tag: "Advanced AI",
+    tagColor: "bg-blue-500",
+    locked: true
+  },
+  {
+    id: 6,
+    title: "Python Programming",
+    description: "Build the essential coding skills required for data analysis and AI development.",
+    duration: "6 weeks",
+    tag: "Foundational",
+    tagColor: "bg-indigo-500",
+    locked: true
+  },
     {
       id: 7,
       title: "Natural Language Processing",
       description: "Advanced course covering specialized topics in nlp.",
       duration: "8 weeks",
-      tag: "NLP",
+      tag: "Advanced AI",
       tagColor: "bg-blue-500",
       locked: true
     },
@@ -73,8 +73,8 @@ const AdvancedCoursesCarousel = () => {
       title: "Reinforcement Learning",
       description: "Advanced course covering specialized topics in ml.",
       duration: "14 weeks",
-      tag: "ML",
-      tagColor: "bg-red-500",
+      tag: "Advanced AI",
+      tagColor: "bg-blue-500",
       locked: true
     }
   ];
