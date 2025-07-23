@@ -8,10 +8,8 @@ const HumanoidSection = () => {
   const ticking = useRef(false);
   const lastScrollY = useRef(0);
 
-  // More responsive timing function with shorter duration
+  // More responsive card styling with better mobile support
   const cardStyle = {
-    height: "60vh",
-    maxHeight: "600px",
     borderRadius: "20px",
     transition:
       "transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1)",
@@ -88,25 +86,28 @@ const HumanoidSection = () => {
   return (
     <div id="ourmission" ref={sectionRef} className="relative" style={{ height: "300vh" }}>
       <section
-        className="w-full h-screen py-10 md:py-16 sticky top-0 overflow-hidden bg-white"
+        className="w-full h-screen py-4 sm:py-6 md:py-10 lg:py-16 sticky top-0 overflow-hidden bg-white"
         id="why-humanoid"
       >
-        <div className="container px-6 lg:px-8 mx-auto h-full flex flex-col">
-          <div className="mb-2 md:mb-3">
-            <h2 className="section-title text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-1 md:mb-2 text-center">
+        <div className="container px-4 sm:px-6 lg:px-8 mx-auto h-full flex flex-col">
+          <div className="mb-2 sm:mb-3 md:mb-4 flex-shrink-0">
+            <h2 className="section-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-1 md:mb-2 text-center">
               Our Mission
             </h2>
           </div>
 
           <div
             ref={cardsContainerRef}
-            className="relative flex-1 perspective-1000"
+            className="relative flex-1 perspective-1000 min-h-0"
           >
             {/* First Card */}
             <div
               className={`absolute inset-0 overflow-hidden shadow-xl ${
                 isFirstCardVisible ? "animate-card-enter" : ""
-              }`}
+              } 
+              h-[70vh] sm:h-[65vh] md:h-[60vh] lg:h-[60vh]
+              max-h-[500px] sm:max-h-[550px] md:max-h-[600px] lg:max-h-[650px]
+              min-h-[400px] sm:min-h-[450px] md:min-h-[500px]`}
               style={{
                 ...cardStyle,
                 zIndex: 10,
@@ -126,15 +127,15 @@ const HumanoidSection = () => {
                 }}
               ></div>
 
-              <div className="absolute top-4 right-4 z-20">
-                <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
-                  <span className="text-sm font-medium font-brockmann">The Problem</span>
+              <div className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20">
+                <div className="inline-flex items-center justify-center px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
+                  <span className="text-xs sm:text-sm font-medium font-brockmann">The Problem</span>
                 </div>
               </div>
 
-              <div className="relative z-10 p-6 sm:p-8 md:p-12 h-full flex items-center">
+              <div className="relative z-10 p-4 sm:p-6 md:p-8 lg:p-12 h-full flex items-center">
                 <div className="max-w-3xl mx-auto">
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-display text-center text-white font-bold leading-relaxed mb-4">
+                  <h3 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-display text-center text-white font-bold leading-relaxed mb-2 sm:mb-4">
                     Learning is Broken. Your Potential is Trapped.<br></br>
                     <br></br>Today's online learning is a maze of passive video
                     lectures, one-size-fits-all curricula, and tests that
@@ -150,7 +151,10 @@ const HumanoidSection = () => {
             <div
               className={`absolute inset-0 overflow-hidden shadow-xl ${
                 isSecondCardVisible ? "animate-card-enter" : ""
-              }`}
+              }
+              h-[70vh] sm:h-[65vh] md:h-[60vh] lg:h-[60vh]
+              max-h-[500px] sm:max-h-[550px] md:max-h-[600px] lg:max-h-[650px]
+              min-h-[400px] sm:min-h-[450px] md:min-h-[500px]`}
               style={{
                 ...cardStyle,
                 zIndex: 20,
@@ -175,15 +179,15 @@ const HumanoidSection = () => {
                 }}
               ></div>
 
-              <div className="absolute top-4 right-4 z-20">
-                <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
-                  <span className="text-sm font-medium font-brockmann">Our Solution</span>
+              <div className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20">
+                <div className="inline-flex items-center justify-center px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
+                  <span className="text-xs sm:text-sm font-medium font-brockmann">Our Solution</span>
                 </div>
               </div>
 
-              <div className="relative z-10 p-6 sm:p-8 md:p-12 h-full flex items-center">
+              <div className="relative z-10 p-4 sm:p-6 md:p-8 lg:p-12 h-full flex items-center">
                 <div className="max-w-3xl mx-auto">
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-display text-center text-white font-bold leading-relaxed mb-4">
+                  <h3 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-display text-center text-white font-bold leading-relaxed mb-2 sm:mb-4">
                     A Smarter Pathway Forward<br></br>
                     <br></br>We replace the traditional monologues with engaging
                     podcast-style lessons. Our Interactive AI Tutor is a chat
@@ -201,7 +205,10 @@ const HumanoidSection = () => {
             <div
               className={`absolute inset-0 overflow-hidden shadow-xl ${
                 isThirdCardVisible ? "animate-card-enter" : ""
-              }`}
+              }
+              h-[70vh] sm:h-[65vh] md:h-[60vh] lg:h-[60vh]
+              max-h-[500px] sm:max-h-[550px] md:max-h-[600px] lg:max-h-[650px]
+              min-h-[400px] sm:min-h-[450px] md:min-h-[500px]`}
               style={{
                 ...cardStyle,
                 zIndex: 30,
@@ -226,15 +233,15 @@ const HumanoidSection = () => {
                 }}
               ></div>
 
-              <div className="absolute top-4 right-4 z-20">
-                <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
-                  <span className="text-sm font-medium font-brockmann">The Outcome</span>
+              <div className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20">
+                <div className="inline-flex items-center justify-center px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
+                  <span className="text-xs sm:text-sm font-medium font-brockmann">The Outcome</span>
                 </div>
               </div>
 
-              <div className="relative z-10 p-6 sm:p-8 md:p-12 h-full flex items-center">
+              <div className="relative z-10 p-4 sm:p-6 md:p-8 lg:p-12 h-full flex items-center">
                 <div className="max-w-3xl mx-auto">
-                  <h3 className="text-lg text-white sm:text-xl md:text-2xl text-center font-display font-bold leading-relaxed mb-4">
+                  <h3 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white text-center font-display font-bold leading-relaxed mb-2 sm:mb-4">
                     From Knowledge to Know-How <br></br>
                     <br></br>
                     <span className="text-white">

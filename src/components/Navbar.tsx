@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
@@ -22,6 +21,11 @@ const Navbar = () => {
     document.body.style.overflow = !isMenuOpen ? 'hidden' : '';
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    document.body.style.overflow = '';
+  };
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -30,8 +34,7 @@ const Navbar = () => {
     
     // Close mobile menu if open
     if (isMenuOpen) {
-      setIsMenuOpen(false);
-      document.body.style.overflow = '';
+      closeMenu();
     }
   };
 
@@ -39,9 +42,12 @@ const Navbar = () => {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 py-2 sm:py-3 md:py-4 transition-all duration-300",
-        isScrolled 
-          ? "bg-white/80 backdrop-blur-md shadow-sm" 
-          : "bg-transparent"
+        // On mobile when menu is open, always show solid background
+        isMenuOpen 
+          ? "bg-white shadow-sm md:bg-white/80 md:backdrop-blur-md" 
+          : isScrolled 
+            ? "bg-white/80 backdrop-blur-md shadow-sm" 
+            : "bg-transparent"
       )}
     >
       <div className="container flex items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -88,7 +94,7 @@ const Navbar = () => {
 
         {/* Mobile menu button - increased touch target */}
         <button 
-          className="md:hidden text-gray-700 p-3 focus:outline-none" 
+          className="md:hidden text-gray-700 p-3 focus:outline-none relative z-50" 
           onClick={toggleMenu}
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         >
@@ -104,63 +110,47 @@ const Navbar = () => {
         <nav className="flex flex-col space-y-8 items-center mt-8">
           <a 
             href="#" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100 font-brockmann" 
             onClick={(e) => {
               e.preventDefault();
               scrollToTop();
-              setIsMenuOpen(false);
-              document.body.style.overflow = '';
+              closeMenu();
             }}
           >
             Home
           </a>
           <a 
-            href="#courses" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
-            onClick={() => {
-              setIsMenuOpen(false);
-              document.body.style.overflow = '';
-            }}
+            href="#ourmission" 
+            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100 font-brockmann" 
+            onClick={closeMenu}
           >
             Our Mission
           </a>
           <a 
-            href="#features" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
-            onClick={() => {
-              setIsMenuOpen(false);
-              document.body.style.overflow = '';
-            }}
+            href="#courses" 
+            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100 font-brockmann" 
+            onClick={closeMenu}
           >
             Courses
           </a>
           <a 
-            href="#courses" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
-            onClick={() => {
-              setIsMenuOpen(false);
-              document.body.style.overflow = '';
-            }}
+            href="#forbusiness" 
+            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100 font-brockmann" 
+            onClick={closeMenu}
           >
             For Business
           </a>
           <a 
-            href="#courses" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
-            onClick={() => {
-              setIsMenuOpen(false);
-              document.body.style.overflow = '';
-            }}
+            href="#joinwaitlist" 
+            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100 font-brockmann" 
+            onClick={closeMenu}
           >
             Join Waitlist
           </a>
           <div className="flex flex-col space-y-4 w-full">
             <button 
-              className="bg-blue-600 text-white text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-blue-700"
-              onClick={() => {
-                setIsMenuOpen(false);
-                document.body.style.overflow = '';
-              }}
+              className="bg-blue-600 text-white text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-blue-700 font-brockmann"
+              onClick={closeMenu}
             >
               Login
             </button>
