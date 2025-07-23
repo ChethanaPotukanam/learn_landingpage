@@ -28,6 +28,13 @@ const BusinessSection = () => {
   return (
     <section id="forbusiness" className="py-16 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
+        {/* CTA Button */}
+        <div className="text-center">
+          <button className="bg-transparent border-2 border-blue-300 text-blue-600 font-semibold font-brockmann py-4 px-8 rounded-lg text-lg transition-all duration-300 hover:bg-blue-600 hover:text-white hover:shadow-xl hover:scale-105 backdrop-blur-sm hover:backdrop-blur-md">
+            Enterprise Solutions
+          </button>
+        </div>
+        <br/><br/>
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-black mb-4 font-brockmann">
@@ -38,13 +45,6 @@ const BusinessSection = () => {
             we provide a unified, intelligent solution.
           </p>
         </div>
-        {/* CTA Button */}
-        <div className="text-center">
-          <button className="bg-transparent border-2 border-blue-300 text-blue-600 font-semibold font-brockmann py-4 px-8 rounded-lg text-lg transition-all duration-300 hover:bg-blue-600 hover:text-white hover:shadow-xl hover:scale-105 backdrop-blur-sm hover:backdrop-blur-md">
-            Enterprise Solutions
-          </button>
-        </div>
-        <br/><br/>
         {/* Benefits Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {benefits.map((benefit, index) => {

@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="w-full bg-white py-2">
+    <footer className="w-full bg-white pt-0 pb-0 mt-0 mb-0">
       <div className="section-container">
         {/* ai.prof logo in footer */}
         <div className="flex justify-center mb-3">
@@ -8,7 +8,7 @@ const Footer = () => {
         </div>
 
         {/* Attribution text */}
-        <p className="text-center text-gray-600 text-base mb-2 font-brockmann">
+        <p className="text-center text-gray-600 text-base mb-0 font-brockmann">
           © Hitloop 2025. All rights reserved.
         </p>
 
@@ -22,4 +22,5 @@ const Footer = () => {
     </footer>
   );
 };
+
 export default Footer;

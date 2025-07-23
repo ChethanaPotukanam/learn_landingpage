@@ -53,7 +53,7 @@ const Newsletter = () => {
   };
 
   return (
-    <div id="joinwaitlist" className="min-h-screen bg-white flex flex-col items-center justify-center p-4">
+    <div id="joinwaitlist" className="bg-white flex flex-col items-center justify-center pb-0 p-4">
       <div className="w-full max-w-4xl text-center mb-8">
         <h2 className="text-4xl font-bold text-gray-800 mb-4 font-brockmann">
           Be the First to Experience the Future of Learning
